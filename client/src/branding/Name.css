@@ -1,0 +1,18 @@
+.Name {
+  font-family: 'Permanent Marker';
+  font-size: 64px;
+
+  padding-right: 10px;
+
+  background-image: linear-gradient(var(--neon-blue) 50%, var(--neon-pink) 95%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+
+  filter: drop-shadow(0px 0px 2px #000) drop-shadow(0px 0px 4px #000)
+    drop-shadow(0px 0px 8px #000) drop-shadow(0px 0px 16px var(--neon-glow));
+}
+
+.Name .s {
+  font-size: 80px;
+}

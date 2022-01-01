@@ -1,0 +1,70 @@
+.CheerAlert69 {
+  transform: translateY(0px);
+  animation: cheeralert69-jump 2s infinite 2s;
+}
+
+.CheerAlert69 .gasm {
+  height: 260px;
+}
+
+.CheerAlert69 .gasm.shudder {
+  transform-origin: bottom;
+  animation: cheeralert69-shudder 1.8s 1;
+}
+
+@keyframes cheeralert69-shudder {
+  0% {
+    transform: translateY(0);
+  }
+  10% {
+    transform: translateY(-10px) scale(1.1);
+  }
+  20% {
+    transform: translateY(0);
+  }
+  30% {
+    transform: translateY(-10px) scale(1.1);
+  }
+  40% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px) scale(1.1);
+  }
+  60% {
+    transform: translateY(0);
+  }
+  70% {
+    transform: translateY(-10px) scale(1.1);
+  }
+  80% {
+    transform: translateY(0);
+  }
+  90% {
+    transform: translateY(-10px) scale(1.1);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes cheeralert69-jump {
+  0% {
+    transform: translateY(0px);
+  }
+  60% {
+    transform: translateY(0px);
+  }
+  70% {
+    transform: translateY(-10px);
+  }
+  80% {
+    transform: translateY(0px);
+  }
+  90% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}

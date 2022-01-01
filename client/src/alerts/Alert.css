@@ -1,0 +1,44 @@
+.Alert {
+  position: fixed;
+  bottom: 0px;
+  left: 50%;
+  padding-bottom: 20px;
+  transform: translate(-50%, 0px);
+
+  font-size: 42px;
+  text-align: center;
+}
+
+.Alert .info.hidden {
+  transition: transform 1s;
+  transform: translateY(150%);
+}
+
+.Alert .info.visible {
+  transition: transform 1s;
+  transform: translateY(0);
+}
+
+.Alert .username {
+  color: var(--neon-blue);
+}
+
+.Alert .variation {
+  height: 140px;
+}
+
+.Alert .float {
+  animation: alert-float 2s infinite;
+}
+
+@keyframes alert-float {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  50% {
+    transform: translate(0px, 5px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}

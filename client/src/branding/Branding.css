@@ -1,0 +1,83 @@
+.Branding {
+  position: fixed;
+  bottom: 60px;
+  right: 24px;
+}
+
+.Branding .float {
+  position: absolute;
+  transform: translateY(10px);
+  animation: social-float 10s infinite;
+}
+
+.Branding .Name {
+  padding-left: 85px;
+}
+
+.Branding .twitch {
+  position: absolute;
+  top: 21px;
+  left: 4px;
+  width: 63px;
+  transform: rotateY(90deg);
+  animation: social-spin 20s linear infinite;
+}
+
+.Branding .twitter {
+  position: absolute;
+  top: 26px;
+  width: 72px;
+  transform: rotateY(90deg);
+  animation: social-spin 20s 10s linear infinite;
+}
+
+@keyframes social-spin {
+  0% {
+    transform: rotateY(-90deg);
+  }
+  1.5% {
+    transform: rotateY(-90deg);
+  }
+  2.5% {
+    transform: rotateY(0deg);
+  }
+  50.5% {
+    transform: rotateY(0deg);
+  }
+  51.5% {
+    transform: rotateY(90deg);
+  }
+  100% {
+    transform: rotateY(90deg);
+  }
+}
+
+@keyframes social-float {
+  0% {
+    transform: translateY(-10px);
+  }
+  2.5% {
+    transform: translateY(15px);
+  }
+  7.5% {
+    transform: translateY(-5px);
+  }
+  37.5% {
+    transform: translateY(4px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  62.5% {
+    transform: translateY(4px);
+  }
+  75% {
+    transform: translateY(0);
+  }
+  87.5% {
+    transform: translateY(4px);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}

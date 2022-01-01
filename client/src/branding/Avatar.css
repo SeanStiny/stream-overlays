@@ -1,0 +1,25 @@
+.Avatar {
+  position: absolute;
+  right: 0px;
+  bottom: 80px;
+  animation: squiddy-float 5s infinite;
+}
+
+.Avatar .squiddy {
+  width: 300px;
+}
+
+@keyframes squiddy-float {
+  0% {
+    transform: rotateZ(0deg) translateY(0);
+  }
+  20% {
+    transform: rotateZ(-8deg) translateY(-18px);
+  }
+  66% {
+    transform: rotateZ(6deg) translateY(0px);
+  }
+  100% {
+    transform: rotateZ(0deg) translateY(0);
+  }
+}

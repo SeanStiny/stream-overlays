@@ -1,0 +1,46 @@
+.CheerAlert50 {
+  transform: translateY(10px);
+  animation: cheeralert50-jump 2s infinite 2s;
+}
+
+.CheerAlert50 .Meowow {
+  height: 260px;
+}
+
+.CheerAlert50 .Meowow.blep {
+  transform-origin: bottom;
+  animation: cheeralert50-blep 1.2s 1;
+}
+
+@keyframes cheeralert50-blep {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes cheeralert50-jump {
+  0% {
+    transform: translateY(10px);
+  }
+  60% {
+    transform: translateY(10px);
+  }
+  70% {
+    transform: translateY(-0px);
+  }
+  80% {
+    transform: translateY(10px);
+  }
+  90% {
+    transform: translateY(-0px);
+  }
+  100% {
+    transform: translateY(10px);
+  }
+}

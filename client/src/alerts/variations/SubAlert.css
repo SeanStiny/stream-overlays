@@ -1,0 +1,46 @@
+.SubAlert {
+  transform: translateY(10px);
+  animation: subalert-jump 2s infinite 2s;
+}
+
+.SubAlert .PopCat {
+  height: 260px;
+}
+
+.SubAlert .PopCat.open {
+  transform-origin: bottom;
+  animation: subalert-baa 1.2s 1;
+}
+
+@keyframes subalert-baa {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes subalert-jump {
+  0% {
+    transform: translateY(10px);
+  }
+  60% {
+    transform: translateY(10px);
+  }
+  70% {
+    transform: translateY(-0px);
+  }
+  80% {
+    transform: translateY(10px);
+  }
+  90% {
+    transform: translateY(-0px);
+  }
+  100% {
+    transform: translateY(10px);
+  }
+}

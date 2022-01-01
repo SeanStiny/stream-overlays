@@ -1,0 +1,20 @@
+:root {
+  --neon-blue: #55e7ff;
+  --neon-glow: #55e7ff66;
+  --neon-pink: #ff34b3;
+}
+
+body {
+  margin: 0;
+  font-family: 'Montserrat';
+  color: white;
+}
+
+.drop-shadow {
+  filter: drop-shadow(0px 0px 2px #000) drop-shadow(0px 0px 4px #000);
+}
+
+.neon-shadow {
+  filter: drop-shadow(0px 0px 2px #000) drop-shadow(0px 0px 4px #000)
+    drop-shadow(0px 0px 8px #000) drop-shadow(0px 0px 16px var(--neon-glow));
+}

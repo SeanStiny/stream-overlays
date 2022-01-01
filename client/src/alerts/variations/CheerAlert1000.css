@@ -1,0 +1,74 @@
+.CheerAlert1000 {
+  transform: translateY(10px);
+  animation: cheeralert1000-blep 3s forwards 0.8s;
+}
+
+.CheerAlert1000 .Meowow {
+  height: 260px;
+}
+
+@keyframes cheeralert1000-blep {
+  0% {
+    transform: scale(1);
+  }
+  5% {
+    transform: scale(1.2);
+  }
+  6.25% {
+    transform: scale(1.4);
+  }
+  7.5% {
+    transform: scale(1.2);
+  }
+  8.75% {
+    transform: scale(1.4);
+  }
+  10% {
+    transform: scale(1.2);
+  }
+  11.25% {
+    transform: scale(1.4);
+  }
+  12.5% {
+    transform: scale(1.2);
+  }
+  13.75% {
+    transform: scale(1.4);
+  }
+  15% {
+    transform: scale(1.2);
+  }
+  16.25% {
+    transform: scale(1.4);
+  }
+  17.5% {
+    transform: scale(1.2);
+  }
+  18.75% {
+    transform: scale(1.4);
+  }
+  100% {
+    transform: scale(0) translateY(-2500px) rotateZ(-1080deg);
+  }
+}
+
+@keyframes cheeralert1000-jump {
+  0% {
+    transform: translateY(10px);
+  }
+  60% {
+    transform: translateY(10px);
+  }
+  70% {
+    transform: translateY(-0px);
+  }
+  80% {
+    transform: translateY(10px);
+  }
+  90% {
+    transform: translateY(-0px);
+  }
+  100% {
+    transform: translateY(10px);
+  }
+}

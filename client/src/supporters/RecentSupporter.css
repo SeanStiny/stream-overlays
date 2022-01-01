@@ -1,0 +1,64 @@
+.Label {
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+
+  font-size: 24px;
+  white-space: nowrap;
+}
+
+.Label .SubBadge, .Label .CheerBadge, .Label .gift-icon {
+  position: absolute;
+  top: -4px;
+  left: -58px;
+  filter: drop-shadow(0px 0px 2px #000) drop-shadow(0px 0px 4px #000)
+}
+
+.Label .SubBadge {
+  height: 50px;
+}
+
+.Label .CheerBadge, .Label .gift-icon {
+  height: 45px;
+}
+
+.Label .username {
+  color: var(--neon-blue);
+  font-size: 32px;
+  filter: drop-shadow(0px 0px 2px #000) drop-shadow(0px 0px 4px #000)
+    drop-shadow(0px 0px 8px #000) drop-shadow(0px 0px 16px var(--neon-glow));
+}
+
+.Label.hidden {
+  opacity: 0;
+  transform: translateY(-50px);
+  transition: opacity 1s, transform 1s;
+}
+
+.Label.shown {
+  opacity: 1;
+  transform: translateY(0px);
+  animation: label-show 1s 1;
+}
+
+@keyframes label-show {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@keyframes label-hide {
+  0% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+}
