@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
-import { RecentSupporter } from './RecentSupporter';
-import './RecentSupportTicker.css';
+import { RecentAlert } from './RecentAlert';
+import './RecentAlertTicker.css';
 
-export function RecentSupportTicker(props) {
+export function RecentAlertTicker(props) {
   const [currentShown, setCurrentShown] = useState(0);
 
   // Rotate between supporters
@@ -10,7 +10,7 @@ export function RecentSupportTicker(props) {
     setCurrentShown(0);
     const changeInterval = setInterval(() => {
       setCurrentShown((currentShown) => {
-        if (currentShown === props.recentSupporters.length - 1) {
+        if (currentShown === props.alerts.length - 1) {
           return 0;
         } else {
           return currentShown + 1;
@@ -21,12 +21,12 @@ export function RecentSupportTicker(props) {
     return () => {
       clearInterval(changeInterval);
     };
-  }, [props.recentSupporters]);
+  }, [props.alerts]);
 
   return (
-    <div className="LabelTicker">
-      {props.recentSupporters.map((supporter, index) => {
-        return <RecentSupporter
+    <div className="RecentAlertTicker">
+      {props.alerts.map((supporter, index) => {
+        return <RecentAlert
           username={supporter.username}
           amount={supporter.amount}
           type={supporter.type}

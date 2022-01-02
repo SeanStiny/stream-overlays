@@ -1,86 +1,40 @@
-import { useEffect } from 'react';
-import { useState } from 'react/cjs/react.development';
+import { useEffect, useState } from 'react';
+import { io } from 'socket.io-client';
 import { Alert } from './alerts/Alert';
 import './App.css';
 import { Branding } from './branding/Branding';
-import { RecentSupportTicker } from './supporters/RecentSupportTicker';
-
-const recentSupporters = [
-  {
-    username: 'SapphireZero7',
-    type: 'cheer',
-    amount: 300,
-  },
-  {
-    username: 'DebROAR',
-    type: 'gift',
-    amount: 5,
-  },
-  {
-    username: 'Flynpeakok',
-    type: 'resub',
-    amount: 4,
-  },
-  {
-    username: 'lilith_the_maid',
-    type: 'sub',
-    amount: 1,
-  },
-  {
-    username: 'VryGlitchy',
-    type: 'resub',
-    amount: 13,
-  },
-];
+import { RecentAlertTicker } from './supporters/RecentAlertTicker';
 
 export function App() {
   const [newAlert, setNewAlert] = useState(null);
+  const [recentAlerts, setRecentAlerts] = useState([]);
 
   useEffect(() => {
-    setTimeout(() => {
-      setNewAlert({
-        username: 'SeanStiny',
-        type: 'cheer',
-        amount: 1,
-      });
-    }, 1000);
+    const socket = io();
+    socket.emit('query recent');
 
-    setTimeout(() => {
-      setNewAlert({
-        username: 'SeanStiny',
-        type: 'cheer',
-        amount: 50,
-      });
-    }, 1100);
+    socket.on('recent', (alerts) => {
+      console.log(alerts);
+      setRecentAlerts(alerts);
+    });
 
-    setTimeout(() => {
-      setNewAlert({
-        username: 'SeanStiny',
-        type: 'cheer',
-        amount: 69,
-      });
-    }, 1100);
+    socket.on('alert', (alert, showInRecents) => {
+      setNewAlert(alert);
+      if (showInRecents) {
+        setRecentAlerts((recentAlerts) => {
+          return [alert, ...recentAlerts.slice(0, recentAlerts.length - 1)];
+        });
+      }
+    });
 
-    setTimeout(() => {
-      setNewAlert({
-        username: 'SeanStiny',
-        type: 'cheer',
-        amount: 200,
-      });
-    }, 1100);
-
-    setTimeout(() => {
-      setNewAlert({
-        username: 'SeanStiny',
-        type: 'cheer',
-        amount: 1000,
-      });
-    }, 1100);
+    return () => {
+      socket.close();
+    };
   }, []);
 
   return (
     <div className="App">
-      <RecentSupportTicker recentSupporters={recentSupporters} />
+      <RecentAlertTicker alerts={recentAlerts} />
       <Alert newAlert={newAlert} />
       <Branding />
     </div>

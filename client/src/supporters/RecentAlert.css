@@ -1,4 +1,4 @@
-.Label {
+.RecentAlert {
   position: absolute;
   right: 0px;
   bottom: 0px;
@@ -7,35 +7,35 @@
   white-space: nowrap;
 }
 
-.Label .SubBadge, .Label .CheerBadge, .Label .gift-icon {
+.RecentAlert .SubBadge, .RecentAlert .CheerBadge, .RecentAlert .gift-icon {
   position: absolute;
   top: -4px;
   left: -58px;
   filter: drop-shadow(0px 0px 2px #000) drop-shadow(0px 0px 4px #000)
 }
 
-.Label .SubBadge {
+.RecentAlert .SubBadge {
   height: 50px;
 }
 
-.Label .CheerBadge, .Label .gift-icon {
+.RecentAlert .CheerBadge, .RecentAlert .gift-icon {
   height: 45px;
 }
 
-.Label .username {
+.RecentAlert .username {
   color: var(--neon-blue);
   font-size: 32px;
   filter: drop-shadow(0px 0px 2px #000) drop-shadow(0px 0px 4px #000)
     drop-shadow(0px 0px 8px #000) drop-shadow(0px 0px 16px var(--neon-glow));
 }
 
-.Label.hidden {
+.RecentAlert.hidden {
   opacity: 0;
   transform: translateY(-50px);
   transition: opacity 1s, transform 1s;
 }
 
-.Label.shown {
+.RecentAlert.shown {
   opacity: 1;
   transform: translateY(0px);
   animation: label-show 1s 1;

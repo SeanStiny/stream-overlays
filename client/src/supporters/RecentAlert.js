@@ -1,9 +1,9 @@
 import { CheerBadge } from '../common/cheer-badge/CheerBadge';
 import { SubBadge } from '../common/sub-badge/SubBadge';
-import './RecentSupporter.css';
+import './RecentAlert.css';
 import giftIcon from './img/gift.png';
 
-export function RecentSupporter(props) {
+export function RecentAlert(props) {
   let icon;
   let action = '';
   let amount = props.amount;
@@ -23,7 +23,7 @@ export function RecentSupporter(props) {
   }
 
   return (
-    <div className={`Label ${props.visible ? 'shown' : 'hidden'}`}>
+    <div className={`RecentAlert ${props.visible ? 'shown' : 'hidden'}`}>
       {icon}
       <span className="username">{props.username}</span>{' '}
       <span className="action">{action}</span>{' '}
