@@ -82,7 +82,7 @@ export function eventsub(
             new Date().getTime(),
             'resub',
             event.user_name,
-            event.duration_months
+            event.cumulative_months
           );
 
           database.alerts?.insert(alert);
@@ -90,7 +90,7 @@ export function eventsub(
           break;
         }
 
-        case 'channel.subscribe': {
+        /*case 'channel.subscribe': {
           const alert = new Alert(
             new Date().getTime(),
             'sub',
@@ -101,7 +101,7 @@ export function eventsub(
           database.alerts?.insert(alert);
           io.emit('alert', alert, true);
           break;
-        }
+        }*/
 
         case 'channel.cheer': {
           const alert = new Alert(
