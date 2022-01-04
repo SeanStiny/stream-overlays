@@ -65,15 +65,6 @@ export function Alert(props) {
     };
   }, [currentAlert]);
 
-  // Text to speech.
-  /*useEffect(() => {
-    if (currentAlert && currentAlert.tts && currentAlert.tts.length > 0) {
-      synthesize(currentAlert.tts).then((audio) => {
-        setTtsAudio(audio);
-      });
-    }
-  }, [currentAlert]);*/
-
   function speak() {
     if (ttsAudio) {
       ttsAudio.play();
@@ -91,7 +82,11 @@ export function Alert(props) {
       action = 'New Sub';
       effect = <SubAlert />;
     } else if (currentAlert.type === 'resub') {
-      action = `Resubbed for ${currentAlert.amount} Months`;
+      if (currentAlert.amount === 1) {
+        action = 'Just Subscribed!';
+      } else {
+        action = `Resubbed for ${currentAlert.amount} Months`;
+      }
       effect = (
         <SubAlert
           onended={() => {

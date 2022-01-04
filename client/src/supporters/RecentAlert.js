@@ -13,7 +13,11 @@ export function RecentAlert(props) {
     amount = 'New Sub';
   } else if (props.type === 'resub') {
     icon = <SubBadge months={props.amount} />;
-    amount = `${props.amount} Months`;
+    if (props.amount === 1) {
+      amount = 'New Sub';
+    } else {
+      amount = `${props.amount} Months`;
+    }
   } else if (props.type === 'gift') {
     icon = <img className='gift-icon' src={giftIcon} alt='' />
     amount = `Gifted x${props.amount}`;
