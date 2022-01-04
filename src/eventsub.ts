@@ -82,7 +82,8 @@ export function eventsub(
             new Date().getTime(),
             'resub',
             event.user_name,
-            event.cumulative_months
+            event.cumulative_months,
+            event.message.text
           );
 
           database.alerts?.insert(alert);
@@ -108,7 +109,8 @@ export function eventsub(
             new Date().getTime(),
             'cheer',
             event.user_name,
-            event.bits
+            event.bits,
+            event.message
           );
 
           database.alerts?.insert(alert);

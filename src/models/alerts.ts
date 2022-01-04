@@ -7,7 +7,8 @@ export class Alert {
     public timestamp: number,
     public type: string,
     public username: string,
-    public amount?: number
+    public amount?: number,
+    public tts?: string
   ) {}
 }
 

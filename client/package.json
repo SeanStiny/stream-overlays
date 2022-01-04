@@ -3,6 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@aws-sdk/client-cognito-identity": "^3.45.0",
+    "@aws-sdk/client-polly": "^3.45.0",
+    "@aws-sdk/credential-provider-cognito-identity": "^3.45.0",
+    "@aws-sdk/polly-request-presigner": "^3.45.0",
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^12.1.2",
     "@testing-library/user-event": "^13.5.0",

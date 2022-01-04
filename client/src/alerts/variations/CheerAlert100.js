@@ -22,10 +22,19 @@ export function CheerAlert100(props) {
   }, []);
 
   useEffect(() => {
+    const onended = props.onended;
+    alertSound.addEventListener('ended', onended);
+
+    return () => {
+      alertSound.removeEventListener('ended', onended);
+    }
+  }, [props.onended]);
+
+  useEffect(() => {
     if (blep) {
       alertSound.play();
     }
-  }, [blep]);
+  }, [blep, props.onended]);
 
   return (
     <div className="CheerAlert100">

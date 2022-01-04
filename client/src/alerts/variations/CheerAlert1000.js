@@ -22,6 +22,15 @@ export function CheerAlert1000(props) {
   }, []);
 
   useEffect(() => {
+    const onended = props.onended;
+    alertSound.addEventListener('ended', onended);
+
+    return () => {
+      alertSound.removeEventListener('ended', onended);
+    }
+  }, [props.onended]);
+
+  useEffect(() => {
     if (blep) {
       alertSound.play();
     }

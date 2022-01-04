@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import { io } from 'socket.io-client';
 import { Alert } from './alerts/Alert';
-import './App.css';
 import { Branding } from './branding/Branding';
 import { RecentAlertTicker } from './supporters/RecentAlertTicker';
 
@@ -14,7 +13,6 @@ export function App() {
     socket.emit('query recent');
 
     socket.on('recent', (alerts) => {
-      console.log(alerts);
       setRecentAlerts(alerts);
     });
 
