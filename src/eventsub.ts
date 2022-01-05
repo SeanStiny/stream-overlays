@@ -110,11 +110,11 @@ export function eventsub(
             'cheer',
             event.user_name,
             event.bits,
-            event.message
+            event.bits >= 10 ? event.message : ''
           );
 
           database.alerts?.insert(alert);
-          io.emit('alert', alert, alert.amount && alert.amount > 50);
+          io.emit('alert', alert, alert.amount && alert.amount >= 50);
           break;
         }
 

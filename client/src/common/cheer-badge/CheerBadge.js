@@ -1,3 +1,4 @@
+import badge1 from './img/1bits72.png';
 import badge100 from './img/100bits72.png';
 import badge1000 from './img/1000bits72.png';
 import badge5000 from './img/5000bits72.png';
@@ -5,6 +6,7 @@ import badge10000 from './img/10000bits72.png';
 import badge25000 from './img/25000bits72.png';
 
 const badges = [
+  { bits: 1, icon: badge1 },
   { bits: 100, icon: badge100 },
   { bits: 1000, icon: badge1000 },
   { bits: 5000, icon: badge5000 },
