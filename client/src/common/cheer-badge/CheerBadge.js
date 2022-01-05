@@ -1,4 +1,4 @@
-import badge1 from './img/1bits72.png';
+import badge1 from './img/1bit72.png';
 import badge100 from './img/100bits72.png';
 import badge1000 from './img/1000bits72.png';
 import badge5000 from './img/5000bits72.png';
