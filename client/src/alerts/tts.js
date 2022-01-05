@@ -4,10 +4,10 @@ import { Polly } from '@aws-sdk/client-polly';
 import { getSynthesizeSpeechUrl } from '@aws-sdk/polly-request-presigner';
 
 const client = new Polly({
-  region: 'eu-west-2',
+  region: process.env.REACT_APP_POLLY_REGION,
   credentials: fromCognitoIdentityPool({
-    client: new CognitoIdentityClient({ region: 'eu-west-2' }),
-    identityPoolId: 'eu-west-2:21dd2585-f50f-4802-a2b9-818a4f4ae38e',
+    client: new CognitoIdentityClient({ region: process.env.REACT_APP_POLLY_REGION }),
+    identityPoolId: process.env.REACT_APP_POLLY_IDENTITY,
   }),
 });
 
