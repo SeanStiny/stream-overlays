@@ -1,7 +1,7 @@
 .Branding {
   position: fixed;
   bottom: 60px;
-  right: 24px;
+  left: 24px;
 }
 
 .Branding .float {
