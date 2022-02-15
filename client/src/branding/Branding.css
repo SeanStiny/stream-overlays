@@ -38,10 +38,11 @@
   }
   1.5% {
     transform: rotateY(-90deg);
-    opacity: 1;
+    opacity: 0;
   }
   2.5% {
     transform: rotateY(0deg);
+    opacity: 1;
   }
   50.5% {
     transform: rotateY(0deg);
