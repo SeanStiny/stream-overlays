@@ -7,18 +7,22 @@
   white-space: nowrap;
 }
 
-.RecentAlert .SubBadge, .RecentAlert .CheerBadge, .RecentAlert .gift-icon {
+.RecentAlert .SubBadge,
+.RecentAlert .CheerBadge,
+.RecentAlert .gift-icon {
   position: absolute;
   top: -4px;
   left: -58px;
   filter: drop-shadow(0px 0px 2px #000) drop-shadow(0px 0px 4px #000)
+    drop-shadow(0px 0px 8px #000) drop-shadow(0px 0px 16px #000);
 }
 
 .RecentAlert .SubBadge {
   height: 50px;
 }
 
-.RecentAlert .CheerBadge, .RecentAlert .gift-icon {
+.RecentAlert .CheerBadge,
+.RecentAlert .gift-icon {
   height: 45px;
 }
 
@@ -26,7 +30,8 @@
   color: var(--neon-blue);
   font-size: 32px;
   filter: drop-shadow(0px 0px 2px #000) drop-shadow(0px 0px 4px #000)
-    drop-shadow(0px 0px 8px #000) drop-shadow(0px 0px 16px var(--neon-glow));
+    drop-shadow(0px 0px 8px #000) drop-shadow(0px 0px 16px #000)
+    drop-shadow(0px 0px 16px var(--neon-glow));
 }
 
 .RecentAlert.hidden {

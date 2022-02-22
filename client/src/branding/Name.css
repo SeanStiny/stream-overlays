@@ -10,7 +10,8 @@
   color: transparent;
 
   filter: drop-shadow(0px 0px 2px #000) drop-shadow(0px 0px 4px #000)
-    drop-shadow(0px 0px 8px #000) drop-shadow(0px 0px 16px var(--neon-glow));
+    drop-shadow(0px 0px 8px #000) drop-shadow(0px 0px 16px #000)
+    drop-shadow(0px 0px 16px var(--neon-glow));
 }
 
 .Name .s {
