@@ -17,7 +17,7 @@ export async function synthesize(text) {
     SampleRate: '24000',
     Text: text,
     TextType: 'text',
-    VoiceId: 'Brian',
+    VoiceId: 'Justin',
     Engine: 'neural',
   };
 
