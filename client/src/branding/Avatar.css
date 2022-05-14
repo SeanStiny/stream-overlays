@@ -1,12 +1,11 @@
 .Avatar {
   position: absolute;
-  right: 0px;
-  bottom: 80px;
+  bottom: 5px;
   animation: squiddy-float 5s infinite;
 }
 
 .Avatar .squiddy {
-  width: 300px;
+  width: 350px;
 }
 
 @keyframes squiddy-float {
@@ -14,10 +13,10 @@
     transform: rotateZ(0deg) translateY(0);
   }
   20% {
-    transform: rotateZ(-8deg) translateY(-18px);
+    transform: rotateZ(-6deg) translateY(-18px);
   }
   66% {
-    transform: rotateZ(6deg) translateY(0px);
+    transform: rotateZ(5deg) translateY(0);
   }
   100% {
     transform: rotateZ(0deg) translateY(0);
