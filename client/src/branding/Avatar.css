@@ -6,6 +6,7 @@
 
 .Avatar .squiddy {
   width: 350px;
+  transform: scaleX(-1);
 }
 
 @keyframes squiddy-float {
@@ -13,10 +14,10 @@
     transform: rotateZ(0deg) translateY(0);
   }
   20% {
-    transform: rotateZ(-6deg) translateY(-18px);
+    transform: rotateZ(-5deg) translateY(-16px);
   }
   66% {
-    transform: rotateZ(5deg) translateY(0);
+    transform: rotateZ(4deg) translateY(0);
   }
   100% {
     transform: rotateZ(0deg) translateY(0);
