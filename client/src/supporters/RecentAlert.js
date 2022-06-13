@@ -27,11 +27,11 @@ export function RecentAlert(props) {
   }
 
   return (
-    <div className={`RecentAlert ${props.visible ? 'shown' : 'hidden'}`}>
+    <div className={`RecentAlert ${props.visible ? 'shown' : 'hidden'} drop-shadow`}>
       {icon}
       <span className="username">{props.username}</span>{' '}
       <span className="action">{action}</span>{' '}
-      <span className="amount drop-shadow">{amount}</span>
+      <span className="amount">{amount}</span>
     </div>
   );
 }
