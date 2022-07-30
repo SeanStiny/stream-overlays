@@ -34,7 +34,6 @@ export function App() {
     <div className="App">
       <RecentAlertTicker alerts={recentAlerts} />
       <Alert newAlert={newAlert} />
-      <Branding />
     </div>
   );
 }
