@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import { io } from 'socket.io-client';
 import { Alert } from './alerts/Alert';
-import { Branding } from './branding/Branding';
 import { RecentAlertTicker } from './supporters/RecentAlertTicker';
 
 export function App() {

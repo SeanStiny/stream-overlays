@@ -7,6 +7,7 @@ export function RecentAlert(props) {
   let icon;
   let action = '';
   let amount = props.amount;
+  let username = props.username;
 
   if (props.type === 'sub') {
     icon = <SubBadge months={props.amount} />;
@@ -21,7 +22,9 @@ export function RecentAlert(props) {
   } else if (props.type === 'gift') {
     icon = <img className='gift-icon' src={giftIcon} alt='' />
     amount = `Gifted x${props.amount}`;
-    props.username = 'Anonymous Gifter';
+    if (username === null) {
+      username = 'Anonymous Gifter';
+    }
   } else if (props.type === 'cheer') {
     icon = <CheerBadge bits={props.amount} />;
     amount = `${amount} Bits`;
@@ -30,7 +33,7 @@ export function RecentAlert(props) {
   return (
     <div className={`RecentAlert ${props.visible ? 'shown' : 'hidden'} drop-shadow`}>
       {icon}
-      <span className="username">{props.username}</span>{' '}
+      <span className="username">{username}</span>{' '}
       <span className="action">{action}</span>{' '}
       <span className="amount">{amount}</span>
     </div>
