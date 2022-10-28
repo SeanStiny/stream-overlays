@@ -134,6 +134,9 @@ export function Alert(props) {
     } else if (currentAlert.type === 'gift') {
       action = `Gifted ${currentAlert.amount} Subs`;
       effect = <SubAlert />;
+      if (currentAlert.username === null) {
+        currentAlert.username = 'Anonymous Gifter';
+      }
     } else if (currentAlert.type === 'raid') {
       action = `Raided with ${currentAlert.amount} Viewers`;
     } else if (currentAlert.type === 'follow') {
