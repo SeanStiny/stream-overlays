@@ -21,6 +21,7 @@ export function RecentAlert(props) {
   } else if (props.type === 'gift') {
     icon = <img className='gift-icon' src={giftIcon} alt='' />
     amount = `Gifted x${props.amount}`;
+    props.username = 'Anonymous Gifter';
   } else if (props.type === 'cheer') {
     icon = <CheerBadge bits={props.amount} />;
     amount = `${amount} Bits`;
